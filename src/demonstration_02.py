@@ -16,5 +16,16 @@ Notes:
 
 
 def add_indexes(numbers):
-    # Your code here
+    # Start a new list
+    # solution = []
+    # # Loop through original numbers list adding a v
+    # for (i, num) in enumerate(numbers):
+    #     solution.append(i + num)
+    # return solution
 
+    # List comprehension version:
+    return [num + i for (i, num) in enumerate(numbers)]
+
+print(add_indexes([0, 0, 0, 0, 0]))
+print(add_indexes([1, 2, 3, 4, 5]))
+print(add_indexes([5, 4, 3, 2, 1]))

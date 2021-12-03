@@ -14,6 +14,16 @@ Examples:
 - get_middle("A") -> "A"
 """
 def get_middle(input_str):
-    # Your code here
+    # CAlculate start index i
+    i = int(len(input_str -1 ) /2)
 
+    # Calculate end index j
+    j = int(len(input_str) / 2 + 1)
 
+    # return from i to j
+    input_str[i:j]
+
+print(get_middle("test"))
+print(get_middle("testing"))
+print(get_middle("middle"))
+print(get_middle("A"))
