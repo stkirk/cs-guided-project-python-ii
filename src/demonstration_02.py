@@ -23,7 +23,8 @@ def add_indexes(numbers):
     #     solution.append(i + num)
     # return solution
 
-    # List comprehension version:
+    # List comprehension version, return a new list and in that list:
+    # add indexValue(num) + indexNumber(i) for (indexNumber(i), numberValue(num)) in enumerate(numbers) 
     return [num + i for (i, num) in enumerate(numbers)]
 
 print(add_indexes([0, 0, 0, 0, 0]))

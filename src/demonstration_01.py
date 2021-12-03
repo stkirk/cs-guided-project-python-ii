@@ -36,6 +36,9 @@ def last(a, n):
         # pseudo --> return a[n indexes from the end:to the end]
         return a[-n:]
 
+        # Think of the slicing operator as a function --> slice(start, end, stepSize) where only the first arg is required
+        # Excluding arguments is like calling the function without arguments, using default end value-->len(iterable) and default-->stepSize(1)
+
 print(last([1, 2, 3, 4, 5], 1))
 print(last([4, 3, 9, 9, 7, 6], 3))
 print(last([1, 2, 3, 4, 5], 7))

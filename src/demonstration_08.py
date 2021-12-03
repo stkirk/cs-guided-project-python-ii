@@ -10,7 +10,7 @@ Examples:
 - parity(2) -> "Even"
 """
 def parity(input_int):
-    # 
+    # return "Even" if the input integer has a remainder of 0 when divided by 2, otherwise return "Odd"
     return "Even" if (input_int % 2 == 0) else "Odd"
 
 print(parity(0))

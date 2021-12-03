@@ -8,12 +8,18 @@ We will consider `a, e, i, o, u as vowels for this challenge (but not y).
 The input string will only consist of lower case letters and/or spaces.
 """
 def get_count(input_str):
+    # letter in "aeiouAEIOU" evaluates to True if that index is one of those letters
+    # True when being summed typecasts to a 1, so for each index that is in that subset 1 is added to the sum
+    return sum(letter in "aeiouAEIOU" for letter in input_str)
+
+def verbose_get_count(input_str):
     # 
-    count = 0
+    vowelCount = 0
     for letter in input_str:
+        # if the index is one of these letters...increment the vowelCount
         if letter in "aeiouAEIOU":
-            count += 1
-    return count
+            vowelCount += 1
+    return vowelCount
         
 
 print(get_count("aeiou")) #5

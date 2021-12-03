@@ -13,15 +13,22 @@ Examples:
 - get_middle("middle") -> "dd"
 - get_middle("A") -> "A"
 """
+import math
+
 def get_middle(input_str):
-    # CAlculate start index i
-    i = int(len(input_str -1 ) /2)
+    start = math.floor(len(input_str) / 2.01)
+    end = math.ceil(len(input_str) / 1.99)
+    return input_str[start:end]
 
-    # Calculate end index j
-    j = int(len(input_str) / 2 + 1)
+def get_middle_convoluted(input_str):
+    # Calculate start index
+    start = int((len(input_str) - 1) / 2)
 
-    # return from i to j
-    input_str[i:j]
+    # Calculate end index
+    end = int(len(input_str) / 2 + 1)
+
+    # return from start to end
+    return input_str[start:end]
 
 print(get_middle("test"))
 print(get_middle("testing"))

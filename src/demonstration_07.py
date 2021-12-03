@@ -14,7 +14,9 @@ Examples:
 """
 def repeat_it(input_str):
     # Construct a list with the repetition thing
-    repList = [letter.upper() + (l.lower() * index) for (index, letter) in enumerate(input_str)]
+    # for each index, make the letter uppercase then add onto that uppercase letter string a lowercase version of the string times the index the letter is in the original string
+    # make a list item for each index letter 
+    repList = [letter.upper() + (letter.lower() * index) for (index, letter) in enumerate(input_str)]
 
     # join the list with a '-' and return
     return '-'.join(repList)

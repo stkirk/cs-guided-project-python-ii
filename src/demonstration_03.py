@@ -14,22 +14,25 @@ Notes:
 """
 
 
-# def multiply_nums(nums):
-#     # Initialize the product
-#     product = 1
+def multiply_nums_long(nums):
+    # Initialize the product
+    product = 1
 
-#     # Seperate the string into a lost of numbers
-#     numberList = nums.split(', ')
+    # Seperate the string into a list of numbers, using 'comma, space' (', ') as a seperator
+    numberList = nums.split(', ')
 
-#     # cast each index to an integer and multiply those numbers together
-#     for i in numberList:
-#         product *= int(i)
-#     return product
+    # cast each index (which is still a string at this point) to an integer and multiply those numbers together
+    for i in numberList:
+        product *= int(i)
+
+    return product
 
 # alternate solution
 def multiply_nums(nums):
-    code = nums.replace(', ', "*") # turns 2, 3 into 2*3
-    return eval(code) #evalutate a string as python code
+    # ("1, 2, 3, 4") --> ("1*2*3*4")
+    codeString = nums.replace(', ', "*") # turns "2, 3" into "2*3"
+    # eval takes a string argument and runs it like python code for everything inside the quotes
+    return eval(codeString)
 
 print(multiply_nums("2, 3"))
 print(multiply_nums("1, 2, 3, 4"))

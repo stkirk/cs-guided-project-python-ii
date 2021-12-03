@@ -16,7 +16,20 @@ Notes:
 the maximum number is first.
 """
 def max_and_min(input_str):
-    # Your code here
+    # split the string into a list on ints
+    numList = input_str.split() #default behavior of split is by an empty space
+    # ("1 2 3 4 5") --> ['1', '2', '3', '4', '5']
+
+    # typecast the list of strings into integers
+    intNumList = [ int(num) for num in numList]
+
+    # built in methods to iterate through a list and find the min and max values
+    listMin = min(intNumList) # returns an integer
+    listMax = max(intNumList) # returns an integer
+
+    # return the min and max in an f string
+    return f'{listMax} {listMin}'
+
 
 print(max_and_min("1 2 3 4 5"))
 print(max_and_min("1 2 -3 4 5"))

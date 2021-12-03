@@ -24,10 +24,11 @@ Notes:
 
 
 def emotify(txt):
-    # Use string replace for each emoticon
+    # Use string replace for each swap of text-->emoticon
     return txt.replace('smile', ':D').replace('grin', ':)').replace('sad', ':(').replace('mad', ':P')
 
 
 print(emotify("Make me smile"))
 print(emotify("Make me grin"))
 print(emotify("Make me sad"))
+print(emotify("Make me mad"))
