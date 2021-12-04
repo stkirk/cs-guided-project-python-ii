@@ -13,7 +13,7 @@ Examples:
 - repeat_it("cwAt") -> "C-Ww-Aaa-Tttt"
 """
 def repeat_it(input_str):
-    # Construct a list with the repetition thing
+    # Construct a list with the repetition thing using string arithmatic
     # for each index, make the letter uppercase then add onto that uppercase letter string a lowercase version of the string times the index the letter is in the original string
     # make a list item for each index letter 
     repList = [letter.upper() + (letter.lower() * index) for (index, letter) in enumerate(input_str)]
